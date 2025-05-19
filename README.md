@@ -40,7 +40,7 @@ gestor_usuarios/
 pip install -r requirements.txt
 ```
 
-🔧 Configuración del entorno
+## 🔧 Configuración del entorno
 Crear un archivo .env en la raíz del proyecto con la siguiente variable:
 
 ```bash
@@ -48,7 +48,7 @@ RUTA_ARHIVO=usuarios.json
 ```
 Podés cambiar el nombre o la ruta del archivo (por ejemplo, data/usuarios.json), y el sistema lo creará automáticamente si no existe.
 
-📌 Uso
+## 📌 Uso
 Ejecutá el programa principal:
 
 ```bash
@@ -63,7 +63,8 @@ Luego seguí el menú interactivo:
 5. Guardar o cargar usuarios desde archivo
 6. Salir
 
-🛠️ Ejemplo de usuario
+## 🛠️ Ejemplo de usuario
+
 Un usuario es representado como un diccionario:
 
 ```json
@@ -74,7 +75,7 @@ Un usuario es representado como un diccionario:
 }
 ```
 
-✅ Buenas prácticas aplicadas
+## ✅ Buenas prácticas aplicadas
 Código modular: cada función está en su propio archivo.
 
 Manejo de errores con excepciones.
