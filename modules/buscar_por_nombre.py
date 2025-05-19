@@ -1,3 +1,6 @@
+import logging
+
+
 def buscar_por_nombre(lista):
     """
     Busca un nombre en una lista de nombres y devuelve la posición del nombre en la lista.
@@ -20,8 +23,8 @@ def buscar_por_nombre(lista):
                 return item
 
     except AssertionError as e:
-        print(f"Error: {e}")
+        logging.error(f"Error: {e}")
         return None
 
-    print(f"El nombre '{nombre}' no se encontró en la lista.")
+    logging.warn(f"El nombre '{nombre}' no se encontró en la lista.")
     return None

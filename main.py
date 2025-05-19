@@ -5,6 +5,12 @@ from modules.buscar_por_nombre import buscar_por_nombre
 from modules.eliminar_usuario import eliminar_usuario
 from modules.guardar_archivo import guardar_archivo, cargar_archivo
 
+import logging
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 lista_usuarios = []
 
 while True:
@@ -47,14 +53,14 @@ while True:
             else:
                 print("Opción no válida. Debe ingresar 'c' (cargar) o 'g' (guardar).")
         else:
-            print("Opción no válida. Intente nuevamente.")
+            logging.info("Opción no válida. Intente nuevamente.")
     except ValueError:
-        print("Error: Debe ingresar un número entero.")
+        logging.error("Error: Debe ingresar un número entero.")
     except Exception as e:
         print(f"Error inesperado: {e}")
 
     if opcion != 6:
-        print("presione cualquier tecla para continuar")
+        logging.info("presione cualquier tecla para continuar")
         input()
     else:
         print("Saliendo del sistema. ¡Hasta luego!")

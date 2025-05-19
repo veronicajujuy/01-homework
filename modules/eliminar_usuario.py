@@ -1,3 +1,6 @@
+import logging
+
+
 def eliminar_usuario(lista):
     """
     Elimina un usuario de la lista de usuarios.
@@ -21,8 +24,8 @@ def eliminar_usuario(lista):
                 return lista
 
     except AssertionError as e:
-        print(f"Error: {e}")
+        logging.error(f"Error: {e}")
         return lista
 
-    print(f"El usuario '{nombre}' no se encontró en la lista.")
+    logging.warning(f"El usuario '{nombre}' no se encontró en la lista.")
     return lista
